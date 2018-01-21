@@ -1,0 +1,134 @@
+git init  -> Inicializa el codigo.
+
+git status  -> Estados de los paquetes (subidos, no subidos)
+
+git add Nombre-> Agregar al archivo a la area de trabajo.
+
+git commit -> hace un commit
+
+git log ->  para ver todos los commit
+
+git checkout -- index.html -> revertir los cambios de las modificaciones locales.(sin add)
+
+git commit -m " He agregado tatata.... " -> Este es el commit completo.
+
+git commit --amend -> Se usa para agregar algo extra a el ultimo commit.
+
+git checkout nombre -> rama a la que quiere cambiarse.
+
+git add . -> agrega todos los archivos de un solo
+
+git push -u origin master -> subir.
+
+git push origin --all -> Sube todas las ramas.
+
+git checkout hash -> para ir a cualquier version
+
+git fetch origin -> Solo recupera la informacion.
+
+git merge origin/master -> Fusiona la información del fetch con el repositorio local 
+
+git clone [URL repositorio] -> Clona un repositorio, se hace primeramente comunmente.
+
+git reset HEAD nombre  ->  Retorna el archivo al repositorio local. ( antes del add)
+
+git log --oneline  -> Muestra el log mas resumido y con el hash destacado.
+
+git merge rama -> Hace una mezcla con la rama escogido y con la que esta en ese momento.
+
+git log --oneline --decorate --all --graph  -> Muestra todos los logs graficados. Decorate, muestra algunas otras caracteristicas.
+
+git merge --abort -> aborta la mezcla.
+
+//************************tag ****************************
+//-------Anotados---
+
+git tag -l "v0.*.0" -> Filtra los tags, siendo el asterisco un puntero.
+
+git tag -a v0.1.0 -> Una descripcion mas larga y detallada en un tag.
+
+//------- ligeros-------
+
+git tag -d v0.1.0 -> Elimina el tag.
+
+git tag -> muestra los tags creados.
+
+git tag v0.2.0 -> Etiqueta para el commit en el que se encuentra.
+
+git tag v0.1.0 4335fa8 -> Etiqueta para otro commit.
+
+//*****************revert**********************
+
+git revert 7d0829a ->  Regresa atras, debe hacer un commit.
+
+git revert --no-commit HEAD -> Regresa atras, sin hacer un commit.Por tanto, puede hacer varios a la vez.
+
+git revert --continue -> Termina el listado de reverts, con un commit al final.
+
+//*****************diff ***********************
+
+
+git diff index.html -> ver diferencias
+
+git diff f4c7ao b5789a -> Ve diferencias entre commits.
+
+git diff HEAD~1 HEAD -> El "~1" indica un coomit anterior al HEAD.
+
+
+
+//***************** Reset ************************
+
+Nota: Tener bastante cuidado, se recomienda usar revert.
+
+** Elimina toda hasta su punto elegido.
+
+git reset f508c5 -> Elimina un commit y su stage segun el hash que se le agregue, dejando solo el repositorio local. ( no recomendado)
+
+git reset --hard f508c5  -> Lo elimina totalmente.
+
+git reset --soft f508c5  -> Elimina el commit dejando su stage.
+ 
+//*****************Notas****************************************
+
+.gitignore -> carpeta para ignorar archivos
+
+git pull ... = fetch + merge.
+
+//**************** Crear perfil*************************************
+
+git config --global user.email contact@gmail.com
+
+git config --global user.name "NOMBRE DEL USUARIO"
+
+//***************branch*******************************************
+
+git branch -> para mirar los branches
+
+git branch nombre -> crear rama.
+
+git branch -d nombre -> Elimina la rama 
+
+git branch -m nombre nombreCambiar -> Para cambiar el nombre de la rama.
+
+//**************** Remote ****************************************
+
+git remote -v -> para ver los remotes agregados
+
+git remote rename nombre nombre2 -> cambia el nombre del remote.
+
+git remote show origin -> mas informacion del remote.
+
+git remote rm destination -> Elimina un remote. 
+
+git remote add origin [URL] -> es para dar la ruta para luego subirse.
+
+//*****************Atajos ******************************
+
+git config --global alias.nombre ' comando' -> Crea un alias con el nombre deseado y el comando que se quiera asignar.
+
+git config --global --get-regexp alias -> Muestra el listado de alias.
+
+git config --global --unset alias.nombre -> Elimina el alias.
+
+
+ 
