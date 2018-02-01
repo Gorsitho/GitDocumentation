@@ -41,11 +41,16 @@ git log --oneline --decorate --all --graph  -> Muestra todos los logs graficados
 git merge --abort -> aborta la mezcla.
 
 //************************tag ****************************
+
+git push --tag  -> Hace un push para los tags creados.
+
 //-------Anotados---
 
 git tag -l "v0.*.0" -> Filtra los tags, siendo el asterisco un puntero.
 
 git tag -a v0.1.0 -> Una descripcion mas larga y detallada en un tag.
+
+git tag -a v0.1.0 -m " Esta es la version 1 ...." -> Se agrega una descripcion mas corta.
 
 //------- ligeros-------
 
